@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://chattingforfree.netlify.app/',
     credentials: true
 }));
 
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://chattingforfree.netlify.app/',
         methods: ['GET', 'POST'],
         credentials: true
     }
